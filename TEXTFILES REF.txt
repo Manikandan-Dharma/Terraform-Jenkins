@@ -1,0 +1,3 @@
+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 -- PASS token GITHUB
+Access key ID	         Secret access key
+AKIAZQ3DSJZBVVD6LTKU	SFBZnEf3uDgB3nK6I8S+jMF+5NgejdG7O8Lhh0nS
