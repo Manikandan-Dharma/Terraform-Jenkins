@@ -1,7 +1,8 @@
-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 -- PASS token GITHUB
+
 Access key ID	        Secret access key
 AKIAZQ3DSJZBU2UIDME6	SKNxJESYHSfjUlJyoRC2mA4W8ywqI36upoa34jqT
 
 git remote set-url origin https://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@github.com/Manikandan-Dharma/Terraform-Jenkins
 
 ok
+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
