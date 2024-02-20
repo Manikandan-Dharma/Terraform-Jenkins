@@ -1,4 +1,4 @@
-
+---
 - name: Deploy Tomcat Server
   hosts: ec2_instance
   become: true
