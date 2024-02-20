@@ -30,8 +30,9 @@ pipeline {
                 sh 'terraform apply -auto-approve'
             }
         }
-                stage('Deploy Tomcat with Ansible') {
+        stage('Deploy Ansible and Tomcat') {
             steps {
+                ansiblePlaybook playbook: 'install_ansible.yml', inventory: 'path/to/your/inventory_file', user: '<username>', become: true
                 ansiblePlaybook playbook: 'deploy_tomcat.yml', inventory: 'path/to/your/inventory_file', user: '<username>', become: true
             }
         }
