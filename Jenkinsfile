@@ -32,8 +32,8 @@ pipeline {
         }
         stage('Deploy Ansible and Tomcat') {
             steps {
-                ansiblePlaybook playbook: 'install_ansible.yml', inventory: 'path/to/your/inventory_file', user: '<username>', become: true
-                ansiblePlaybook playbook: 'deploy_tomcat.yml', inventory: 'path/to/your/inventory_file', user: '<username>', become: true
+                ansiblePlaybook playbook: 'install_ansible.yml', inventory: 'TOMCAT-server', user: '<ec2-user>', become: true
+                ansiblePlaybook playbook: 'deploy_tomcat.yml', inventory: 'TOMCAT-server', user: '<ec2-user>', become: true
             }
         }
     }
