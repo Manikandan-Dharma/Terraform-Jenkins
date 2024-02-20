@@ -32,8 +32,8 @@ pipeline {
         }
         stage('Deploy Ansible and Tomcat') {
             steps {
-                ansiblePlaybook playbook: 'install_ansible.yml', inventory: 'TOMCAT-server', become: true
-                ansiblePlaybook playbook: 'deploy_tomcat.yml', inventory: 'TOMCAT-server', become: true
+                ansiblePlaybook playbook: 'install_ansible.yml', inventory: '/var/lib/jenkins/workspace/Terraform-Jenkins/TOMCAT-server', become: true
+                ansiblePlaybook playbook: 'deploy_tomcat.yml', inventory: '/var/lib/jenkins/workspace/Terraform-Jenkins/TOMCAT-server', become: true
             }
         }
     }
