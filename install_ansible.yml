@@ -1,6 +1,6 @@
 ---
 - name: Install Ansible
-  hosts: ec2_instance
+  hosts: TOMCAT-server1
   become: true
   tasks:
     - name: Install EPEL repository
