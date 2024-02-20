@@ -1,7 +1,0 @@
-
-Access key ID	        Secret access key
-AKIAZQ3DSJZBU2UIDME6	SKNxJESYHSfjUlJyoRC2mA4W8ywqI36upoa34jqT
-
-git remote set-url origin https://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@github.com/Manikandan-Dharma/Terraform-Jenkins
-
-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
