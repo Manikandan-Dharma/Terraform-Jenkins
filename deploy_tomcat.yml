@@ -1,6 +1,6 @@
 ---
 - name: Deploy Tomcat Server
-  hosts: ec2_instance
+  hosts: TOMCAT-server1
   become: true
   tasks:
     - name: Install Java
