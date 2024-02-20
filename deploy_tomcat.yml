@@ -1,0 +1,29 @@
+name: Deploy Tomcat Server
+  hosts: TOMCAT-server
+  become: true
+  vars:
+    tomcat_version: "9" 
+    tomcat_minor_version: "42" 
+    tomcat_home: "/opt/tomcat"
+  tasks:
+    - name: Install Java
+      yum:
+        name: java-1.8.0-openjdk
+        state: present
+    
+    - name: Download and extract Tomcat
+      get_url:
+        url: "https://downloads.apache.org/tomcat/tomcat-{{ tomcat_version }}/v{{ tomcat_version }}.{{ tomcat_minor_version }}/bin/apache-tomcat-{{ tomcat_version }}.{{ tomcat_minor_version }}.tar.gz"
+        dest: "/tmp/apache-tomcat-{{ tomcat_version }}.{{ tomcat_minor_version }}.tar.gz"
+        mode: '0644'
+
+    - name: Extract Tomcat
+      ansible.builtin.unarchive:
+        src: "/tmp/apache-tomcat-{{ tomcat_version }}.{{ tomcat_minor_version }}.tar.gz"
+        dest: "{{ tomcat_home }}"
+        remote_src: yes
+    
+    - name: Start Tomcat Service
+      ansible.builtin.service:
+        name: tomcat
+        state: started
